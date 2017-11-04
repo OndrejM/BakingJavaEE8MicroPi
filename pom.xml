@@ -29,7 +29,8 @@
     </repositories>
 
     <properties>
-        <payara.version>5.0.0.Alpha2-SNAPSHOT</payara.version>
+        <payara.version>5.0.0.Alpha3</payara.version>
+        <payara.api.version>4.1.2.173</payara.api.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
