@@ -6,7 +6,6 @@ import javax.ejb.Startup;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 
-import fish.payara.cluster.Clustered;
 import fish.payara.micro.cdi.Outbound;
 
 import java.io.Serializable;
@@ -14,7 +13,6 @@ import java.io.Serializable;
 /**
  * @author Mike Croft
  */
-@Clustered
 @Singleton
 @Startup
 public class StockTicker implements Serializable{
@@ -25,7 +23,7 @@ public class StockTicker implements Serializable{
     @Outbound(loopBack = true)
     private Event<Stock> stockEvents;
 
-    @Schedule(hour = "*", minute="*", second = "*/1", persistent = false)
+    @Schedule(hour = "*", minute="*", second = "*/1", persistent = true)
     private void generatePrice() {
         stock = new Stock("PYA", "Some very long description of Payara", Math.random() * 100.0);
         System.out.println(stock);
