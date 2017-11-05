@@ -25,7 +25,7 @@ import javax.ws.rs.sse.SseEventSource;
 public class StockTickerSseClient {
 
     @Inject
-    @ConfigProperty(name = "micro.pi.stockticker.url", defaultValue = "NOT FOUND")
+    @ConfigProperty(name = "stockticker.url", defaultValue = "NOT FOUND")
     private String stockTickerURL;
 
 
