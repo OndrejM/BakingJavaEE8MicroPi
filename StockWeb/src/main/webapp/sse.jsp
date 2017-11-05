@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -8,7 +9,9 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            requestSse("${sseView.stockTickerUrl}");
+            <c:forEach var = "url" items="${sseView.stockTickerUrls}">
+                requestSse("${url}");
+            </c:forEach>
         });
     </script>
   </head>

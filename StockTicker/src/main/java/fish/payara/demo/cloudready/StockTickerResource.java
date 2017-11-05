@@ -1,4 +1,4 @@
-package fish.payara.demo.BakingJavaEE8MicroPi;
+package fish.payara.demo.cloudready;
 
 import fish.payara.micro.cdi.Inbound;
 

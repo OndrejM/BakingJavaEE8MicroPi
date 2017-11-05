@@ -1,4 +1,4 @@
-package fish.payara.demo.BakingJavaEE8MicroPi;
+package fish.payara.demo.cloudready;
 
 import javax.ejb.Schedule;
 import javax.enterprise.event.Event;
@@ -23,7 +23,7 @@ public class StockTicker implements Serializable{
     @Outbound(loopBack = true)
     private Event<Stock> stockEvents;
     
-    @ConfigProperty(name = "stockticker.symbol", defaultValue = "PYA")
+    @ConfigProperty(name = "stockticker.symbol", defaultValue = "Paris")
     @Inject
     private Instance<String> symbolConfig;
     

@@ -1,4 +1,4 @@
-package fish.payara.demo.BakingJavaEE8MicroPi;
+package fish.payara.demo.cloudready;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
